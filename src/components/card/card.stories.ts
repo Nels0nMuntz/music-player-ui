@@ -11,6 +11,9 @@ const meta = {
   argTypes: {
     title: {
         control: "text"
+    },
+    description: {
+        control: "text"
     }
   },
 } satisfies Meta<typeof Card>;
@@ -21,5 +24,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     title: 'Default Card Title',
+    description: 'This is a default card description. It provides a brief overview of the content within the card.',
   },
 };
