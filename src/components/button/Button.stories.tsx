@@ -3,14 +3,28 @@ import { Button } from "./Button";
 import { ChevronLeft, ChevronRight } from "lucide-react"; // or your icon set
 
 const meta: Meta<typeof Button> = {
-  title: "UI/Button",
+  title: "Components/Button",
   component: Button,
   tags: ["autodocs"],
   argTypes: {
+    variant: {
+      control: { type: "select" },
+      options: ["default", "secondary", "outline", "destructive", "link"],
+      defaultValue: "default",
+    },
+    size: {
+      control: { type: "select" },
+      options: ["sm", "lg", "default", "icon"],
+      defaultValue: "default",
+    },
+    className: { control: "text" },
+    leftIcon: { control: "text" },
+    rightIcon: { control: "text" },
+    asChild: { control: "boolean" },
     onClick: { action: "clicked" },
   },
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
 };
 
@@ -29,7 +43,21 @@ export const Sizes: Story = {
       <Button size="sm">Small</Button>
       <Button size="default">Default</Button>
       <Button size="lg">Large</Button>
-      <Button size="icon">🔍</Button>
+      <Button size="icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="ui-w-4 ui-h-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </Button>
     </div>
   ),
 };

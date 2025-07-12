@@ -7,18 +7,18 @@ interface ButtonProps
   extends React.PropsWithChildren,
     React.ButtonHTMLAttributes<HTMLButtonElement> {
   size?: "sm" | "lg" | "default" | "icon" | null;
-  asChild?: boolean;
-  className?: string;
   variant?:
-    | "link"
-    | "default"
-    | "destructive"
-    | "outline"
-    | "secondary"
-    | "ghost"
-    | null;
+  | "link"
+  | "default"
+  | "destructive"
+  | "outline"
+  | "secondary"
+  | "ghost"
+  | null;
+  className?: string;
   leftIcon?: React.ReactNode;
   rightIcon?: React.ReactNode;
+  asChild?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
 
@@ -45,9 +45,9 @@ const Button = React.forwardRef<React.ElementRef<"button">, ButtonProps>(
       onClick={onClick}
       {...props}
     >
-      {leftIcon}
+      <span>{leftIcon}</span>
       {children}
-      {rightIcon}
+      <span>{rightIcon}</span>
     </UIButton>
   )
 );
