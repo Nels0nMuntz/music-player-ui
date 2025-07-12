@@ -16,6 +16,11 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"), // <--- Add this line
+    },
+  },
   plugins: [
     react(),
     dts({
@@ -31,7 +36,9 @@ export default defineConfig({
       name: "MusicPlayerUI",
       fileName: (format) => `music-player-ui.${format}.js`,
       formats: ["es", "cjs", "umd"],
+
     },
+
     rollupOptions: {
       external: Object.keys(peerDependencies),
       output: {
@@ -40,6 +47,7 @@ export default defineConfig({
           "react-dom": "ReactDOM",
         },
       },
+      
     },
   },
   test: {
