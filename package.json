@@ -17,7 +17,7 @@
     "name": "Eugene Chekerdes",
     "email": "eugene.checkerdes@gmail.com"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "main": "dist/music-player-ui.es.js",
   "types": "dist/index.d.ts",
