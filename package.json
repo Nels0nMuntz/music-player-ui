@@ -70,6 +70,8 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
-    "@radix-ui/react-slot": "^1.2.3"
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-slot": "^1.2.3",
+    "cmdk": "^1.1.1"
   }
 }
