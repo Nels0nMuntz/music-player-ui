@@ -1,8 +1,25 @@
 {
   "name": "music-player-ui",
-  "private": true,
-  "version": "0.0.0",
+  "description": "A music player UI component library built with React and Tailwind CSS",
+  "keywords": [
+    "react",
+    "tailwindcss",  
+    "ui-components",
+    "music-player"
+  ],
+  "homepage": "https://github.com/Nels0nMuntz/music-player-ui",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nels0nMuntz/music-player-ui"
+  },
+  "private": false,
+  "author": {
+    "name": "Eugene Chekerdes",
+    "email": "eugene.checkerdes@gmail.com"
+  },
+  "version": "0.0.1",
   "type": "module",
+  "main": "dist/music-player-ui.es.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
@@ -37,7 +54,10 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^3.3.1",
-    "tw-animate-css": "^1.3.5"
+    "tw-animate-css": "^1.3.5",
+    "@radix-ui/react-dialog": "^1.1.14",
+    "@radix-ui/react-slot": "^1.2.3",
+    "cmdk": "^1.1.1"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.0.1",
@@ -68,10 +88,5 @@
     "vite": "^7.0.4",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.2.4"
-  },
-  "dependencies": {
-    "@radix-ui/react-dialog": "^1.1.14",
-    "@radix-ui/react-slot": "^1.2.3",
-    "cmdk": "^1.1.1"
   }
 }
